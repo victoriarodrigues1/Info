@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Portal de Informática - Professora Victória Campos</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #2c3e50;
+            background-color: #f4f7f6;
+            line-height: 1.6;
+        }
+        
+        /* Cabeçalho Principal */
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5rem;
+        }
+        .header p {
+            margin: 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Menu de Navegação */
+        .nav-bar {
+            background-color: #ffffff;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        .nav-link {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 0 10px;
+            color: #1e3c72;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            background-color: #f0f4f8;
+            transition: all 0.3s ease;
+            border: 1px solid #d0dfec;
+        }
+        .nav-link:hover {
+            background-color: #1e3c72;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(30, 60, 114, 0.2);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            color: #1e3c72;
+            font-size: 2rem;
+            border-left: 6px solid #2a5298;
+            padding-left: 15px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        
+        /* Cards Informativos */
+        .card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid #e2e8f0;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        .col {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        
+        /* Layout de Imagens */
+        .img-container {
+            text-align: center;
+            margin: 15px 0;
+            background-color: #f8fafc;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px dashed #cbd5e1;
+        }
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            max-height: 200px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .img-container img:hover {
+            transform: scale(1.03);
+        }
+        .img-desc {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        
+        .badge {
+            display: inline-block;
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+        
+        /* Tabelas */
+        .table-custom {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .table-custom th, .table-custom td {
+            border: 1px solid #cbd5e1;
+            padding: 12px;
+            text-align: left;
+        }
+        .table-custom th {
+            background-color: #1e3c72;
+            color: white;
+            font-weight: bold;
+        }
+        .table-custom tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #1e3c72;
+            color: white;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <div class="header">
+        <h1>🖥️ Portal de Aprendizado e Jogos</h1>
+        <p>Apostila de Informática Básica | Professora Victória Campos (Apoio UFV)</p>
+    </div>
+
+    <!-- Navegação Interativa -->
+    <div class="nav-bar">
+        <a href="index.html" class="nav-link">📖 Tudo que Aprendemos</a>
+        <a href="pagina2.html" class="nav-link">🎮 Nossos Jogos</a>
+    </div>
+
+    <div class="container">
+        
+        <!-- Seção: Tudo Que Aprendemos -->
+        <div id="aprendizado">
+            <h2 class="section-title">🌟 Tudo que Aprendemos nas Aulas</h2>
+            
+            <div class="grid-1">
+                <div class="col">
+                    <span class="badge">Passo 1</span>
+                    <h3>Como funciona um Computador?</h3>
+                    <p>Aprendemos os passos seguros e corretos para ligar e desligar o computador usando o Windows, evitando puxar o cabo da tomada para proteger o sistema e evitar desligar ele pelo botão, mas sim pelo computador.</p>
+                    <p> <mark>Atenção!</mark> <br>
+                        ❌ Nunca desligue o computador puxando o cabo da tomada. <br>
+                        ❌ Não pressione o botão de ligar para desligar diretamente (a menos que o computador esteja travado).
+                        <br>
+                        ✔ Sempre use a opção Desligar no sistema.
+                        </p>
+                    <div class="img-container">
+                        <img style="margin: 20px;" src="imagens/windows-10.jpg" alt="Simbolo do Windows">
+                        <img style="margin: 20px;" src="imagens/desligar.png" alt="Simbolo de desligar">
+                        <div class="img-desc">Os simbolos que aprendemos a procurar quando for ligar e desligar </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <span class="badge">Passo 2</span>
+                    <h3>O Conceito de Hardware</h3>
+                    <p>Dominamos a identificação de todas as partes físicas do computador que podemos tocar, como monitor, teclado, mouse, gabinete, headset e projetores.</p>
+                    <div class="img-container grid-1">
+                        <img style="width: 600px; height: auto; max-height: none; max-width: 100%; object-fit: contain;" src="imagens/Hardwaresp1.png" alt="Hardware parte 1">
+                        <img style="width: 600px; height: auto; max-height: none; max-width: 100%; object-fit: contain;" src="imagens/Hardwaresp2.png" alt="Hardware parte 2">
+                        <div class="img-desc">Equipamentos e partes físicas que manipulamos</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-1">
+                <div class="col">
+                    <span class="badge">Passo 3</span>
+                    <h3>O Conceito de Software</h3>
+                    <p>Entendemos a parte lógica do sistema: os programas, editores de texto como o LibreOffice Writer e Word, os navegadores (Chrome) e nossos amados jogos.</p>
+                    <div class="img-container">
+                        <img style="width: 600px; height: auto; max-height: none; max-width: 100%; object-fit: contain;" src="imagens/softwares.png" alt="Código e Programas">
+                        <div class="img-desc">Softwares e aplicativos que fazem tudo funcionar</div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <span class="badge">Passo 4</span>
+                    <h3>Como pesquisar qualquer coisa na internet</h3>
+                    <p> Podemos pesquisar qualquer coisa na internet com responsabilidade, bom senso e com cuidado para não colocar vírus no computador.</p>
+                    <div class="img-container grid-2">
+                        <img src="imagens/chrome.jpg" alt="Navegador Google Chrome">
+                        <div class="img-desc">Escolha o navegador de sua preferência. </div>
+                        <img src="imagens/Busca.png" alt="Busca">
+                        <div class="img-desc">E aí é só digitar na área de busca do Google.</div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <span class="badge">Passo 5</span>
+                    <h3>Postura, Ergonomia e Digitação</h3>
+                    <p>Exercitamos a postura saudável (costas retas, pés no chão), altura correta da tela(na altura dos olhos) e o uso correto dos dedos no teclado usando marcas em relevo das teclas <strong>F</strong> e <strong>J</strong>.</p>
+                    <div class="img-container">
+                        <img src="imagens/postura correta.webp" alt="Teclado e Digitação">
+                        <img src="imagens/touch-typing-1.webp" alt="Teclado e Digitação">
+                        <div class="img-desc">Posição correta das mãos na linha de base</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>⌨️ Atalhos Essenciais de Teclado</h3>
+                <p>Nossos maiores aliados para produzir mais rápido!</p>
+                <table class="table-custom">
+                    <thead>
+                        <tr>
+                            <th>Atalho</th>
+                            <th>Função</th>
+                            <th>Atalho</th>
+                            <th>Função</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Ctrl + C</strong></td>
+                            <td>Copiar conteúdo selecionado</td>
+                            <td><strong>Ctrl + V</strong></td>
+                            <td>Colar conteúdo copiado</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ctrl + X</strong></td>
+                            <td>Recortar conteúdo</td>
+                            <td><strong>Ctrl + Z</strong></td>
+                            <td>Desfazer a última ação</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ctrl + B</strong></td>
+                            <td>Negrito (Modo de Destaque)</td>
+                            <td><strong>Ctrl + I</strong></td>
+                            <td>Itálico (Texto Inclinado)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <h3> Editor de Texto</h3>
+                <p>Focamos em transformar uma folha em branco em um documento profissional, organizado e bem estruturado.</p>
+                <li><strong>Formatação de Texto:</strong> Aprendemos a dominar o uso de Negrito (Ctrl + B), Itálico (Ctrl + I) e Sublinhado para dar destaque às ideias importantes.</li>
+                <li><strong>Alinhamento Profissional:</strong> Como alinhar textos à esquerda, centralizar títulos, alinhar à direita e usar o formato Justificado para deixar trabalhos escolares e documentos impecáveis.</li>
+                <li><strong>Estética e Fontes:</strong> Escolha adequada de fontes (como Arial e Times New Roman) e tamanhos adequados para títulos e corpo de texto.</li>
+                <li><strong>Inserção de Elementos:</strong> Como adicionar imagens, criar tabelas organizadas e formatar listas com marcadores ou numeração.</li>
+
+                     <img style="width: 600px; height: auto; max-height: none; max-width: 100%; object-fit: contain;" src="imagens/editor.png" alt="Pastas e Arquivos">
+                </div>
+            
+            
+            <div class="card">
+                <h3> Planilha</h3>
+                <p>Desmistificamos o bicho-papão das tabelas! Aprendemos que planilhas não são apenas para guardar dados, mas para fazer o computador trabalhar por nós.</p>
+                <li><strong>Entendimento de Grade:</strong> O que são Linhas, Colunas e Células (e como localizá-las, como a famosa célula A1).</li>
+                <li><strong>Fórmulas Matemáticas:</strong> Aprendemos a usar o sinal de igual (=) para iniciar uma fórmula e fazer contas automáticas de soma (=SOMA), subtração, multiplicação e divisão.</li>
+                <li><strong>Formatação de Células:</strong> Como pintar tabelas, mesclar células para criar títulos bonitos e formatar números como Moeda (R$) para finanças pessoais.</li>
+                <li><strong>Criação de Gráficos:</strong> Como transformar uma tabela cheia de números em um gráfico visual (de colunas ou pizza) fácil de entender.</li>
+
+                     <img style="width: 600px; height: auto; max-height: none; max-width: 100%; object-fit: contain;" src="imagens/excel.png" alt="Pastas e Arquivos">
+                </div>
+            </div>
+            <div class="card">
+                <h3>📁 Organização de Pastas e Arquivos</h3>
+                <p>Aprendemos a organizar nossa "biblioteca gigante" criando e guardando nossos arquivos nas respectivas pastas destinadas ao Projeto Informática.</p>
+                <div class="img-container">
+                     <img style="width: 600px; height: auto; max-height: none; max-width: 100%; object-fit: contain;" src="imagens/pastas e arquivos.png" alt="Pastas e Arquivos">
+                </div>
+               
+            
+            </div>
+        </div>
+        
+   
+
+    </div>
+
+    <!-- Rodapé -->
+    <div class="footer">
+        <p>Projeto com o apoio da UFV — Desenvolvido com carinho para os nossos alunos.</p>
+    </div>
+
+</body>
+</html>

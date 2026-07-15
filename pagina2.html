@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Portal de Informática - Professora Victória Campos</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #2c3e50;
+            background-color: #f4f7f6;
+            line-height: 1.6;
+        }
+        
+        /* Cabeçalho Principal */
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5rem;
+        }
+        .header p {
+            margin: 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Menu de Navegação */
+        .nav-bar {
+            background-color: #ffffff;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        .nav-link {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 0 10px;
+            color: #1e3c72;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            background-color: #f0f4f8;
+            transition: all 0.3s ease;
+            border: 1px solid #d0dfec;
+        }
+        .nav-link:hover {
+            background-color: #1e3c72;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(30, 60, 114, 0.2);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            color: #1e3c72;
+            font-size: 2rem;
+            border-left: 6px solid #2a5298;
+            padding-left: 15px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        
+        /* Cards Informativos */
+        .card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid #e2e8f0;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        .col {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        
+        /* Layout de Imagens */
+        .img-container {
+            text-align: center;
+            margin: 15px 0;
+            background-color: #f8fafc;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px dashed #cbd5e1;
+        }
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            max-height: 200px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .img-container img:hover {
+            transform: scale(1.03);
+        }
+        .img-desc {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        
+        .badge {
+            display: inline-block;
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+        
+        /* Tabelas */
+        .table-custom {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .table-custom th, .table-custom td {
+            border: 1px solid #cbd5e1;
+            padding: 12px;
+            text-align: left;
+        }
+        .table-custom th {
+            background-color: #1e3c72;
+            color: white;
+            font-weight: bold;
+        }
+        .table-custom tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #1e3c72;
+            color: white;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <div class="header">
+        <h1>🖥️ Portal de Aprendizado e Jogos</h1>
+        <p>Apostila de Informática Básica | Professora Victória Campos (Apoio UFV)</p>
+    </div>
+
+    <!-- Navegação Interativa -->
+    <div class="nav-bar">
+        <a href="index.html" class="nav-link">📖 Tudo que Aprendemos</a>
+        <a href="pagina2.html" class="nav-link">🎮 Nossos Jogos</a>
+    </div>
+        
+        <!-- Seção: Nossos Jogos -->
+        <div class="container" id="jogos">
+            <h2 class="section-title">🎮 Nossos Jogos Didáticos</h2>
+
+            <div class="card">
+                <h3>🎯 AgileFingers - Desafios de Digitação</h3>
+                <p>Nossa atividade diária: dedicamos 10 minutos todas as aulas para treinar a memória muscular de cada dedo de forma inteligente sem olhar para o teclado.</p>
+                <a class="btn btn-info" href="https://agilefingers.com/pt"> Click aqui para ir para o  Agile Fingers</a>
+                <div class="img-container">
+                    <img src="imagens/agile fingers.png" alt="Gamer e Foco">
+                    <div class="img-desc">A prática diária leva à perfeição</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>🎯 Jogos do AgileFingers</h3>
+                <p>Vimos que podiamos aprender a digitar brincando.</p>
+                <a class="btn btn-info" href="https://agilefingers.com/pt/jogos"> Click aqui para ir para os jogos do  Agile Fingers</a>
+                <div class="img-container">
+                    <img style="width: 600px; height: auto; max-height: none; max-width: 100%; object-fit: contain;" src="imagens/jogosAFp1.png" alt="Simbolo do Windows">
+                    <img style="width: 600px; height: auto; max-height: none; max-width: 100%; object-fit: contain;" src="imagens/jogosAFp2.png" alt="Simbolo de desligar">
+                    <div class="img-desc">Aprender jogando é muito melhor!</div>
+                </div>
+            </div>
+        </div>
+    <!-- Header Banner -->
+    <div class="header-banner text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold"> Portal de Programação e Pensamento Computacional</h1>
+            <p class="lead mb-0">Desenvolva sua lógica de forma divertida através de desafios interativos no Code.org!</p>
+        </div>
+    </div>
+
+    <!-- Seção de Introdução Pedagógica -->
+    <div class="container mb-5">
+        <div class="intro-section">
+            <h2 class="h3 fw-bold text-dark mb-3">Por que aprendemos programando com jogos?</h2>
+            <p>
+                Nas aulas de informática, a programação de computadores vai muito além de apenas digitar códigos. Através de desafios lúdicos, os alunos desenvolvem o <strong>pensamento computacional</strong>, que é a capacidade de analisar problemas complexos, identificar padrões e criar soluções passo a passo (algoritmos).
+            </p>
+            <p class="mb-0">
+                Cada jogo selecionado possui objetivos de aprendizado específicos que ajudam a amadurecer o raciocínio lógico em diferentes etapas da educação. Conheça as propostas abaixo:
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Grid dos Jogos -->
+    <div class="container ">
+            <!-- Angry Birds -->
+            <div class="contain grid-1">
+                <div class="card card-game p-4">
+                    <div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h3 class="h4 fw-bold mb-0 text-dark">Angry Birds</h3>
+                            <span class="badge badge-level">Curso C</span>
+                       
+                        </div>
+                        <div class="img-container">
+                                 <img style="width: 300px; height: auto; max-height: none; max-width: 100%; object-fit: contain;" src="imagens/Angrybirds.png" alt="Angry Birds">
+                            </div>
+                        <p class="text-muted"><strong>O Desafio:</strong> Ajude o pássaro furioso a traçar o caminho correto para capturar o porquinho verde usando blocos de comando.</p>
+                        <hr>
+                        <p class="small text-secondary mb-0">
+                            <strong>Significado Pedagógico:</strong> Este jogo desenvolve a <strong>noção espacial e o sequenciamento lógico</strong>. O aluno aprende a planejar ações futuras em sequência direta (cima, baixo, esquerda, direita), assimilando que computadores executam instruções estritamente na ordem em que são escritas.
+                        </p>
+                    </div>
+                    <div class="mt-4">
+                        <a href="https://studio.code.org/courses/coursec-2025/units/1/lessons/3/levels/1" target="_blank" class="btn-play text-center">Jogar Agora ➔</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Minecraft -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card card-game p-4">
+                    <div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h3 class="h4 fw-bold mb-0 text-dark">Minecraft</h3>
+                            <span class="badge badge-level">Curso D</span>
+                        </div>
+                        <div class="img-container">
+                                 <img style="width: 300px; height: auto; max-height: none; max-width: 100%; object-fit: contain;" src="imagens/minecraft.png" alt="Angry Birds">
+                            </div>
+                        <p class="text-muted"><strong>O Desafio:</strong> Viaje por cenários tridimensionais para minerar blocos, coletar recursos e automatizar construções.</p>
+                        <hr>
+                        <p class="small text-secondary mb-0">
+                            <strong>Significado Pedagógico:</strong> Focado na introdução de <strong>laços de repetição (loops)</strong>. O aluno exercita a otimização de algoritmos: ao invés de repetir o mesmo comando várias vezes, aprende a programar estruturas de repetição para automatizar ações em massa, simulando a lógica de códigos eficientes do mundo real.
+                        </p>
+                    </div>
+                    <div class="mt-4">
+                        <a href="https://studio.code.org/courses/coursed-2025/units/1/lessons/15/levels/1" target="_blank" class="btn-play text-center">Jogar Agora ➔</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Era do Gelo -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card card-game p-4">
+                    <div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h3 class="h4 fw-bold mb-0 text-dark">Era do Gelo</h3>
+                            <span class="badge badge-level">Curso A</span>
+                        </div>
+                        <div class="img-container">
+                                 <img style="width: 300px; height: auto; max-height: none; max-width: 100%; object-fit: contain;" src="imagens/eradogelo.png" alt="Angry Birds">
+                            </div>
+                        <p class="text-muted"><strong>O Desafio:</strong> Guie o esquilo Scrat por fendas e caminhos escorregadios de gelo para pegar sua amada noz.</p>
+                        <hr>
+                        <p class="small text-secondary mb-0">
+                            <strong>Significado Pedagógico:</strong> Ideal para introdução à tecnologia, focando fortemente em <strong>depuração (debugging) e resiliência</strong>. O aluno é estimulado a testar soluções de forma livre, identificar exatamente onde o algoritmo "falhou" e ajustar a sequência de forma intuitiva, aprendendo a encarar o erro como parte natural da ciência.
+                        </p>
+                    </div>
+                    <div class="mt-4">
+                        <a href="https://studio.code.org/courses/coursea-2025/units/1/lessons/4/levels/2" target="_blank" class="btn-play text-center">Jogar Agora ➔</a>
+                    </div>
+                </div>
+            </div>
+
+        
+    </div>
+    </div>
+
+    <!-- Rodapé -->
+    <div class="footer">
+        <p>Projeto com o apoio da UFV — Desenvolvido com carinho para os nossos alunos.</p>
+    </div>
+
+</body>
+</html>
